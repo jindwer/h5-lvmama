@@ -1,0 +1,13 @@
+/*
+输入框控制
+*/
+$('input').focus(function(){
+  $(this).siblings('.info').show().end().siblings('.tips').hide();
+});
+$('input').blur(function(){
+  $(this).siblings('.info').hide().end().siblings('.tips').show();
+});
+$('.tips').click(function(){
+  $(this).hide().prev().focus();
+});
+console.log($('.footer'));
